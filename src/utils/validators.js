@@ -35,7 +35,7 @@ let resources = {
 
 
 function checkEmpty(value, required, messages = resources) {
-	if (isNil(value) || value === "") {
+	if (isNil(value) || value.trim() === "") {
 		if (required) {
 			return [msg(messages.fieldIsRequired)];
 		} else {
